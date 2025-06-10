@@ -1,1 +1,56 @@
+Pep 8 - Styleguide für Phyton
+
+1. Einrückung
+
+def greet():
+        print("Hallo!") #korrekt
+
+
+def greet():
+        print("Hallo!") #falsch, weil 2 Leerzeichen verwendet werden
+
+
+3. Zeilenlänge
+
+# falsch, da zu lang
+some_variable_name = "Dies ist ein sehr langer String, der weit über die empholene Zeilenlänge"
+
+# besser
+some_variable_name = ( 
+        "Dies ist ein sehr langer String, "
+        "der auf mehrere Zeilen verteilt wurde." 
+)
+
+
+4. Leerzeilen 
+
+def foo():
+      pass
+
+def bar():
+      pass
+
+
+5. Abstände im Code 
+
+# schlecht
+if(x == 1) : print("Hi")
+
+#korrekt
+if x == 1:
+      print("Hi")
+
+oder
+
+x = a + b 
+
+
+6. Vermeide unnötigen code
+
+#falsch
+if is_valid == true
+
+#besser
+if is_valid:
+
 
