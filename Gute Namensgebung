@@ -1,0 +1,10 @@
+# Gute Namensgebung – klar, aussagekräftig
+
+first_number = 5
+second_number = 10
+
+def add_two_numbers(number1, number2):
+    return number1 + number2
+
+result = add_two_numbers(first_number, second_number)
+print(result)
