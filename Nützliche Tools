@@ -17,11 +17,9 @@ Schritt 1:
 Den Code in eine Variable schreiben, z.B.
 
 my_code = ´´´
-      a = 30
-      b = 40
 
-print(a+b) 
-  def x () usw....
+      Der Code der geprüft werden soll ´´´
+      
 
 
 Schritt 2:
