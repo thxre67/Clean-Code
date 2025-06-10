@@ -1,1 +1,35 @@
+#Anleitung zur Installation von Pylint im JupiterHUB
+
+Schritt 1: 
+Neuen Launcher erstellen
+
+Schritt 2:
+Terminal auswählen
+
+Schritt 3: 
+pip install pylint (mit enter bestätigen)
+
+
+
+#Verwendung des Tools
+
+Schritt 1:
+Den Code in eine Variable schreiben, z.B.
+
+my_code = ´´´
+      a = 30
+      b = 40
+
+print(a+b) 
+  def x () usw....
+
+
+Schritt 2:
+Den Code in eine Datei speichern mit: 
+
+with open("test.py", "w") as f:
+    f.write(code)
+
+-Die Datei heißt nun "test.py"-
+
 
