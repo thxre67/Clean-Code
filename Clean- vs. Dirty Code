@@ -1,1 +1,56 @@
+# Beispiel zu Dirty- und Clean-Code
+
+﻿Dirty Code:
+
+def a(x):
+    y = 0
+    for i in x:
+        if i[1] == "food":
+            if i[2] › 10:
+                y += i[2] * i[3] * 0.9
+            else:
+                y += i[2] * i[3]
+        else:
+            if i[2] › 5:
+                y += i[2] * i[3] * 0.95
+            else:
+                y += i[2] * i[3]
+for i in x:
+      print(i[0], i[2], i[3])
+
+# Rückgabe
+return y
+
+
+
+
+
+Clean Code:
+
+from typing import List, Tuple
+
+Item = Tuple[str, str, int, float] # name, category, quantity, price
+
+
+def calculate_discounted_price(category: str, quantity: int, price: float) -> float:
+    if category == "food" and quantity > 10:
+        return quantity * price * 0.9
+    elif category != "food" and quantity > 5:
+        return quantity * price * 0.95
+    return quantity * price
+
+
+def calculate_total(items: List[Item]) -> float:
+    return sum(calculate_discounted_price(cat, qty, price) for _, cat, qty, price in items)
+
+
+def print_order_summary(items: List[Item]) -> None:
+    for name, _, qty, price in items:
+        print(f"{name}: {qty} x {price} €")
+
+
+def process_order(items: List[Item]) -> float:
+    print_order_summary(items)
+    return calculate_total(items)
+
 
