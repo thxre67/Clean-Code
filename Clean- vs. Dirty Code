@@ -27,6 +27,8 @@ return y
 
 Clean Code:
 
+
+
 from typing import List, Tuple
 
 Item = Tuple[str, str, int, float] # name, category, quantity, price
